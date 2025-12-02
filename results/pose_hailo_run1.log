@@ -1,0 +1,21 @@
+[539:08:39.034703049] [156039] [1;32m INFO [1;37mCamera [1;34mcamera_manager.cpp:326 [0mlibcamera v0.5.1+100-e53bdf1f
+[539:08:39.043935232] [156042] [1;32m INFO [1;37mRPI [1;34mpisp.cpp:720 [0mlibpisp version v1.2.1 981977ff21f3 29-04-2025 (14:13:50)
+[539:08:39.058930785] [156042] [1;32m INFO [1;37mRPI [1;34mpisp.cpp:1179 [0mRegistered camera /base/axi/pcie@1000120000/rp1/i2c@80000/ov5647@36 to CFE device /dev/media0 and ISP device /dev/media2 using PiSP variant BCM2712_C0
+Made X/EGL preview window
+Postprocessing requested lores: 640x640 BGR888
+Reading post processing stage "hailo_yolo_pose"
+Mode selection for 1296:972:12:P(30)
+    SGBRG10_CSI2P,640x480/58.924 - Score: 3296
+    SGBRG10_CSI2P,1296x972/46.3371 - Score: 1000
+    SGBRG10_CSI2P,1920x1080/32.8052 - Score: 1349.67
+    SGBRG10_CSI2P,2592x1944/15.6335 - Score: 30299.9
+Stream configuration adjusted
+[539:08:39.498200895] [156039] [1;32m INFO [1;37mCamera [1;34mcamera.cpp:1205 [0mconfiguring streams: (0) 1296x972-YUV420/sYCC (1) 640x640-BGR888/sRGB (2) 1296x972-GBRG_PISP_COMP1/RAW
+[539:08:39.498522085] [156042] [1;32m INFO [1;37mRPI [1;34mpisp.cpp:1483 [0mSensor: /base/axi/pcie@1000120000/rp1/i2c@80000/ov5647@36 - Selected sensor format: 1296x972-SGBRG10_1X10 - Selected CFE format: 1296x972-PC1g
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+libpng warning: iCCP: known incorrect sRGB profile
+QObject::killTimer: Timers cannot be stopped from another thread
+QObject::~QObject: Timers cannot be stopped from another thread

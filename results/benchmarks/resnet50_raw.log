@@ -1,0 +1,56 @@
+Starting Measurements...
+Measuring FPS in HW-only mode
+Network resnet_v1_50/resnet_v1_50: 6% | 47 | FPS: 46.95 | ETA: 00:00:14
+[F[2KNetwork resnet_v1_50/resnet_v1_50: 13% | 94 | FPS: 46.96 | ETA: 00:00:13
+[F[2KNetwork resnet_v1_50/resnet_v1_50: 20% | 142 | FPS: 47.29 | ETA: 00:00:12
+[F[2KNetwork resnet_v1_50/resnet_v1_50: 26% | 189 | FPS: 47.20 | ETA: 00:00:11
+[F[2KNetwork resnet_v1_50/resnet_v1_50: 33% | 237 | FPS: 47.35 | ETA: 00:00:10
+[F[2KNetwork resnet_v1_50/resnet_v1_50: 40% | 284 | FPS: 47.29 | ETA: 00:00:09
+[F[2KNetwork resnet_v1_50/resnet_v1_50: 46% | 331 | FPS: 47.24 | ETA: 00:00:08
+[F[2KNetwork resnet_v1_50/resnet_v1_50: 53% | 379 | FPS: 47.33 | ETA: 00:00:07
+[F[2KNetwork resnet_v1_50/resnet_v1_50: 60% | 426 | FPS: 47.29 | ETA: 00:00:06
+[F[2KNetwork resnet_v1_50/resnet_v1_50: 66% | 474 | FPS: 47.35 | ETA: 00:00:05
+[F[2KNetwork resnet_v1_50/resnet_v1_50: 73% | 521 | FPS: 47.32 | ETA: 00:00:04
+[F[2KNetwork resnet_v1_50/resnet_v1_50: 80% | 568 | FPS: 47.28 | ETA: 00:00:03
+[F[2KNetwork resnet_v1_50/resnet_v1_50: 86% | 616 | FPS: 47.34 | ETA: 00:00:02
+[F[2KNetwork resnet_v1_50/resnet_v1_50: 93% | 663 | FPS: 47.31 | ETA: 00:00:01
+[F[2KNetwork resnet_v1_50/resnet_v1_50: 100% | 710 | FPS: 47.33 | ETA: 00:00:00
+Measuring FPS (and Power on supported platforms) in streaming mode
+Network resnet_v1_50/resnet_v1_50: 6% | 47 | FPS: 46.95 | ETA: 00:00:14
+[F[2KNetwork resnet_v1_50/resnet_v1_50: 13% | 95 | FPS: 47.45 | ETA: 00:00:13
+[F[2KNetwork resnet_v1_50/resnet_v1_50: 20% | 142 | FPS: 47.28 | ETA: 00:00:12
+[F[2KNetwork resnet_v1_50/resnet_v1_50: 26% | 189 | FPS: 47.19 | ETA: 00:00:11
+[F[2KNetwork resnet_v1_50/resnet_v1_50: 33% | 237 | FPS: 47.34 | ETA: 00:00:10
+[F[2KNetwork resnet_v1_50/resnet_v1_50: 40% | 284 | FPS: 47.28 | ETA: 00:00:09
+[F[2KNetwork resnet_v1_50/resnet_v1_50: 46% | 332 | FPS: 47.38 | ETA: 00:00:08
+[F[2KNetwork resnet_v1_50/resnet_v1_50: 53% | 379 | FPS: 47.32 | ETA: 00:00:07
+[F[2KNetwork resnet_v1_50/resnet_v1_50: 60% | 426 | FPS: 47.28 | ETA: 00:00:06
+[F[2KNetwork resnet_v1_50/resnet_v1_50: 66% | 474 | FPS: 47.35 | ETA: 00:00:05
+[F[2KNetwork resnet_v1_50/resnet_v1_50: 73% | 521 | FPS: 47.31 | ETA: 00:00:04
+[F[2KNetwork resnet_v1_50/resnet_v1_50: 80% | 569 | FPS: 47.36 | ETA: 00:00:03
+[F[2KNetwork resnet_v1_50/resnet_v1_50: 86% | 616 | FPS: 47.33 | ETA: 00:00:02
+[F[2KNetwork resnet_v1_50/resnet_v1_50: 93% | 663 | FPS: 47.30 | ETA: 00:00:01
+[F[2KNetwork resnet_v1_50/resnet_v1_50: 100% | 710 | FPS: 47.33 | ETA: 00:00:00
+Measuring HW Latency
+Network resnet_v1_50/resnet_v1_50: 6% | 47 | HW Latency: 15.48 ms | ETA: 00:00:14
+[F[2KNetwork resnet_v1_50/resnet_v1_50: 13% | 94 | HW Latency: 15.46 ms | ETA: 00:00:13
+[F[2KNetwork resnet_v1_50/resnet_v1_50: 20% | 142 | HW Latency: 15.46 ms | ETA: 00:00:12
+[F[2KNetwork resnet_v1_50/resnet_v1_50: 26% | 189 | HW Latency: 15.46 ms | ETA: 00:00:11
+[F[2KNetwork resnet_v1_50/resnet_v1_50: 33% | 237 | HW Latency: 15.46 ms | ETA: 00:00:10
+[F[2KNetwork resnet_v1_50/resnet_v1_50: 40% | 284 | HW Latency: 15.46 ms | ETA: 00:00:09
+[F[2KNetwork resnet_v1_50/resnet_v1_50: 46% | 331 | HW Latency: 15.45 ms | ETA: 00:00:08
+[F[2KNetwork resnet_v1_50/resnet_v1_50: 53% | 379 | HW Latency: 15.45 ms | ETA: 00:00:07
+[F[2KNetwork resnet_v1_50/resnet_v1_50: 60% | 426 | HW Latency: 15.45 ms | ETA: 00:00:06
+[F[2KNetwork resnet_v1_50/resnet_v1_50: 66% | 474 | HW Latency: 15.45 ms | ETA: 00:00:05
+[F[2KNetwork resnet_v1_50/resnet_v1_50: 73% | 521 | HW Latency: 15.45 ms | ETA: 00:00:04
+[F[2KNetwork resnet_v1_50/resnet_v1_50: 80% | 568 | HW Latency: 15.45 ms | ETA: 00:00:03
+[F[2KNetwork resnet_v1_50/resnet_v1_50: 86% | 616 | HW Latency: 15.45 ms | ETA: 00:00:02
+[F[2KNetwork resnet_v1_50/resnet_v1_50: 93% | 663 | HW Latency: 15.45 ms | ETA: 00:00:01
+[F[2KNetwork resnet_v1_50/resnet_v1_50: 100% | 710 | HW Latency: 15.45 ms | ETA: 00:00:00
+
+=======
+Summary
+=======
+FPS     (hw_only)                 = 47.3274
+        (streaming)               = 47.3296
+Latency (hw)                      = 15.4518 ms

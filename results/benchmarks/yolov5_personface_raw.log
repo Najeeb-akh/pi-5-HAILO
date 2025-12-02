@@ -1,0 +1,56 @@
+Starting Measurements...
+Measuring FPS in HW-only mode
+Network yolov5s_personface/yolov5s_personface: 6% | 63 | FPS: 62.97 | ETA: 00:00:14
+[F[2KNetwork yolov5s_personface/yolov5s_personface: 13% | 127 | FPS: 63.44 | ETA: 00:00:13
+[F[2KNetwork yolov5s_personface/yolov5s_personface: 20% | 190 | FPS: 63.27 | ETA: 00:00:12
+[F[2KNetwork yolov5s_personface/yolov5s_personface: 26% | 254 | FPS: 63.44 | ETA: 00:00:11
+[F[2KNetwork yolov5s_personface/yolov5s_personface: 33% | 317 | FPS: 63.34 | ETA: 00:00:10
+[F[2KNetwork yolov5s_personface/yolov5s_personface: 40% | 381 | FPS: 63.43 | ETA: 00:00:09
+[F[2KNetwork yolov5s_personface/yolov5s_personface: 46% | 444 | FPS: 63.36 | ETA: 00:00:08
+[F[2KNetwork yolov5s_personface/yolov5s_personface: 53% | 508 | FPS: 63.43 | ETA: 00:00:07
+[F[2KNetwork yolov5s_personface/yolov5s_personface: 60% | 571 | FPS: 63.38 | ETA: 00:00:06
+[F[2KNetwork yolov5s_personface/yolov5s_personface: 66% | 635 | FPS: 63.43 | ETA: 00:00:05
+[F[2KNetwork yolov5s_personface/yolov5s_personface: 73% | 698 | FPS: 63.39 | ETA: 00:00:04
+[F[2KNetwork yolov5s_personface/yolov5s_personface: 80% | 762 | FPS: 63.43 | ETA: 00:00:03
+[F[2KNetwork yolov5s_personface/yolov5s_personface: 86% | 825 | FPS: 63.40 | ETA: 00:00:02
+[F[2KNetwork yolov5s_personface/yolov5s_personface: 93% | 889 | FPS: 63.43 | ETA: 00:00:01
+[F[2KNetwork yolov5s_personface/yolov5s_personface: 100% | 951 | FPS: 63.39 | ETA: 00:00:00
+Measuring FPS (and Power on supported platforms) in streaming mode
+Network yolov5s_personface/yolov5s_personface: 6% | 63 | FPS: 62.97 | ETA: 00:00:14
+[F[2KNetwork yolov5s_personface/yolov5s_personface: 13% | 126 | FPS: 62.94 | ETA: 00:00:13
+[F[2KNetwork yolov5s_personface/yolov5s_personface: 20% | 190 | FPS: 63.27 | ETA: 00:00:12
+[F[2KNetwork yolov5s_personface/yolov5s_personface: 26% | 254 | FPS: 63.44 | ETA: 00:00:11
+[F[2KNetwork yolov5s_personface/yolov5s_personface: 33% | 317 | FPS: 63.34 | ETA: 00:00:10
+[F[2KNetwork yolov5s_personface/yolov5s_personface: 40% | 380 | FPS: 63.27 | ETA: 00:00:09
+[F[2KNetwork yolov5s_personface/yolov5s_personface: 46% | 444 | FPS: 63.37 | ETA: 00:00:08
+[F[2KNetwork yolov5s_personface/yolov5s_personface: 53% | 507 | FPS: 63.31 | ETA: 00:00:07
+[F[2KNetwork yolov5s_personface/yolov5s_personface: 60% | 571 | FPS: 63.38 | ETA: 00:00:06
+[F[2KNetwork yolov5s_personface/yolov5s_personface: 66% | 635 | FPS: 63.44 | ETA: 00:00:05
+[F[2KNetwork yolov5s_personface/yolov5s_personface: 73% | 698 | FPS: 63.39 | ETA: 00:00:04
+[F[2KNetwork yolov5s_personface/yolov5s_personface: 80% | 761 | FPS: 63.35 | ETA: 00:00:03
+[F[2KNetwork yolov5s_personface/yolov5s_personface: 86% | 825 | FPS: 63.40 | ETA: 00:00:02
+[F[2KNetwork yolov5s_personface/yolov5s_personface: 93% | 889 | FPS: 63.43 | ETA: 00:00:01
+[F[2KNetwork yolov5s_personface/yolov5s_personface: 100% | 951 | FPS: 63.39 | ETA: 00:00:00
+Measuring HW Latency
+Network yolov5s_personface/yolov5s_personface: 6% | 62 | HW Latency: 13.32 ms | ETA: 00:00:14
+[F[2KNetwork yolov5s_personface/yolov5s_personface: 13% | 124 | HW Latency: 13.26 ms | ETA: 00:00:13
+[F[2KNetwork yolov5s_personface/yolov5s_personface: 20% | 187 | HW Latency: 13.25 ms | ETA: 00:00:12
+[F[2KNetwork yolov5s_personface/yolov5s_personface: 26% | 249 | HW Latency: 13.24 ms | ETA: 00:00:11
+[F[2KNetwork yolov5s_personface/yolov5s_personface: 33% | 311 | HW Latency: 13.24 ms | ETA: 00:00:10
+[F[2KNetwork yolov5s_personface/yolov5s_personface: 40% | 373 | HW Latency: 13.23 ms | ETA: 00:00:09
+[F[2KNetwork yolov5s_personface/yolov5s_personface: 46% | 436 | HW Latency: 13.23 ms | ETA: 00:00:08
+[F[2KNetwork yolov5s_personface/yolov5s_personface: 53% | 498 | HW Latency: 13.22 ms | ETA: 00:00:07
+[F[2KNetwork yolov5s_personface/yolov5s_personface: 60% | 560 | HW Latency: 13.23 ms | ETA: 00:00:06
+[F[2KNetwork yolov5s_personface/yolov5s_personface: 66% | 623 | HW Latency: 13.23 ms | ETA: 00:00:05
+[F[2KNetwork yolov5s_personface/yolov5s_personface: 73% | 685 | HW Latency: 13.23 ms | ETA: 00:00:04
+[F[2KNetwork yolov5s_personface/yolov5s_personface: 80% | 747 | HW Latency: 13.23 ms | ETA: 00:00:03
+[F[2KNetwork yolov5s_personface/yolov5s_personface: 86% | 809 | HW Latency: 13.23 ms | ETA: 00:00:02
+[F[2KNetwork yolov5s_personface/yolov5s_personface: 93% | 871 | HW Latency: 13.22 ms | ETA: 00:00:01
+[F[2KNetwork yolov5s_personface/yolov5s_personface: 100% | 933 | HW Latency: 13.22 ms | ETA: 00:00:00
+
+=======
+Summary
+=======
+FPS     (hw_only)                 = 63.3939
+        (streaming)               = 63.3939
+Latency (hw)                      = 13.2244 ms

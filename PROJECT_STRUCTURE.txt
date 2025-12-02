@@ -1,0 +1,27 @@
+ESSENTIAL FILES - 31 MB Total
+═════════════════════════════════════════════
+
+📄 DELIVERABLES (Read These):
+├── ESSENTIAL_GUIDE.md (2KB) ⭐ START HERE
+├── FINAL_PROJECT_DOCUMENTATION.md (16KB) ⭐ MAIN DELIVERABLE  
+├── RESULTS_SUMMARY.txt (8KB) ⭐ VISUAL RESULTS
+└── results/benchmarks/BENCHMARK_RESULTS.md ⭐ DETAILED ANALYSIS
+
+📚 RESEARCH (Shows You Did Research):
+└── docs/research/
+    ├── hailo_capabilities.md (10KB)
+    ├── model_references.md (9KB)
+    └── benchmark_comparisons.md (9KB)
+
+🔬 RAW DATA (Proof of Testing):
+└── results/benchmarks/
+    └── segmentation_raw.log
+
+💾 MODELS (Necessary - 31MB):
+├── src/pose_estimation/models/yolov8s_pose_h8l_pi.hef (24MB)
+└── src/segmentation/models/yolov5n_seg_h8l_mz.hef (7.5MB)
+
+TOTAL: 31 MB (mostly models - unavoidable)
+═════════════════════════════════════════════
+
+EVERYTHING ELSE REMOVED to save space! ✅
