@@ -1,0 +1,123 @@
+{
+  "timestamp": "20251229_111957",
+  "total_frames": 30,
+  "total_time_sec": 2.5236275190000015,
+  "avg_fps": 11.88764973203638,
+  "avg_latency_ms": 56.89551366658634,
+  "min_latency_ms": 49.43093099973339,
+  "max_latency_ms": 79.86775600011242,
+  "parameters_sample": [
+    {
+      "num_hands": 0,
+      "landmarks": [],
+      "finger_angles": [],
+      "hand_bbox": [],
+      "frame": 0,
+      "latency_ms": 56.642238999756955
+    },
+    {
+      "num_hands": 0,
+      "landmarks": [],
+      "finger_angles": [],
+      "hand_bbox": [],
+      "frame": 1,
+      "latency_ms": 62.90948900004878
+    },
+    {
+      "num_hands": 0,
+      "landmarks": [],
+      "finger_angles": [],
+      "hand_bbox": [],
+      "frame": 2,
+      "latency_ms": 79.86775600011242
+    },
+    {
+      "num_hands": 0,
+      "landmarks": [],
+      "finger_angles": [],
+      "hand_bbox": [],
+      "frame": 3,
+      "latency_ms": 73.25912900023468
+    },
+    {
+      "num_hands": 0,
+      "landmarks": [],
+      "finger_angles": [],
+      "hand_bbox": [],
+      "frame": 4,
+      "latency_ms": 72.01364900038243
+    },
+    {
+      "num_hands": 0,
+      "landmarks": [],
+      "finger_angles": [],
+      "hand_bbox": [],
+      "frame": 5,
+      "latency_ms": 70.68446399989625
+    },
+    {
+      "num_hands": 0,
+      "landmarks": [],
+      "finger_angles": [],
+      "hand_bbox": [],
+      "frame": 6,
+      "latency_ms": 57.614414999989094
+    },
+    {
+      "num_hands": 0,
+      "landmarks": [],
+      "finger_angles": [],
+      "hand_bbox": [],
+      "frame": 7,
+      "latency_ms": 62.29447899977458
+    },
+    {
+      "num_hands": 0,
+      "landmarks": [],
+      "finger_angles": [],
+      "hand_bbox": [],
+      "frame": 8,
+      "latency_ms": 50.84273000011308
+    },
+    {
+      "num_hands": 0,
+      "landmarks": [],
+      "finger_angles": [],
+      "hand_bbox": [],
+      "frame": 9,
+      "latency_ms": 54.57492999994429
+    }
+  ],
+  "all_latencies": [
+    56.642238999756955,
+    62.90948900004878,
+    79.86775600011242,
+    73.25912900023468,
+    72.01364900038243,
+    70.68446399989625,
+    57.614414999989094,
+    62.29447899977458,
+    50.84273000011308,
+    54.57492999994429,
+    54.38516799995341,
+    50.62932000009823,
+    56.172525999954814,
+    52.96772299971053,
+    54.03220099969985,
+    54.75794900030451,
+    50.700725999831775,
+    55.872277000162285,
+    52.2795059996497,
+    52.56739899959939,
+    55.07030299986582,
+    49.43093099973339,
+    54.98506199955955,
+    51.28102999969997,
+    53.07114699962767,
+    54.79309599968474,
+    50.57842799988066,
+    59.769886000140104,
+    53.03762799985634,
+    49.77982400032488
+  ]
+}

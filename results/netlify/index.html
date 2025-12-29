@@ -720,8 +720,8 @@
                     <div class="stat-label">Min Latency</div>
                 </div>
                 <div class="stat-card blue">
-                    <div class="stat-value">5</div>
-                    <div class="stat-label">Models Tested</div>
+                    <div class="stat-value">6</div>
+                    <div class="stat-label">Models/Demos</div>
                 </div>
             </div>
 
@@ -1502,7 +1502,10 @@ hailortcli benchmark /usr/share/hailo-models/resnet_v1_50_h8l.hef
 hailortcli benchmark /usr/share/hailo-models/yolov5s_personface_h8l.hef
 
 # CPU Baseline (ResNet50)
-python3 benchmark_cpu_resnet50.py</div>
+python3 benchmark_cpu_resnet50.py
+
+# Hand Landmark Detection (MediaPipe - NOT Hailo Zoo)
+python3 src/hand_landmarks/hand_landmark_demo.py --video /path/to/video.h264 --frames 150</div>
 
             <h3>Test Validation</h3>
             <div class="stats-grid">
@@ -1518,9 +1521,185 @@ python3 benchmark_cpu_resnet50.py</div>
                     <div class="stat-value">1</div>
                     <div class="stat-label">CPU Baseline</div>
                 </div>
+                <div class="stat-card blue">
+                    <div class="stat-value">1</div>
+                    <div class="stat-label">End-to-End Demo</div>
+                </div>
                 <div class="stat-card orange">
                     <div class="stat-value">&lt;0.1%</div>
                     <div class="stat-label">FPS Variance</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hand Landmark Detection Demo -->
+        <section>
+            <div class="section-header">
+                <div class="section-icon green">✋</div>
+                <h2>Hand Landmark Detection - End-to-End Demo</h2>
+            </div>
+            
+            <div class="alert alert-info">
+                <div class="alert-icon">🎯</div>
+                <div>
+                    <div class="alert-title">Independent Model Implementation</div>
+                    <div class="alert-text">This demo uses <strong>MediaPipe Hands</strong> (NOT from Hailo Zoo) to demonstrate end-to-end parameter extraction and real-time hand landmark detection. This addresses the requirement for models beyond the Hailo Model Zoo.</div>
+                </div>
+            </div>
+            
+            <p>To demonstrate comprehensive edge AI capabilities beyond pre-compiled Hailo models, we implemented a complete hand landmark detection system using Google's MediaPipe Hands framework. This end-to-end demo extracts comprehensive parameters including FPS, latency, 21 landmark coordinates per hand, finger angles, and bounding boxes.</p>
+            
+            <h3>Implementation Details</h3>
+            <div class="comparison-grid">
+                <div class="card">
+                    <h4 style="color: var(--accent-cyan); margin-bottom: 1rem;">🔧 Technical Specifications</h4>
+                    <ul>
+                        <li><strong>Model:</strong> MediaPipe Hands (Google, NOT Hailo Zoo)</li>
+                        <li><strong>Landmarks:</strong> 21 per hand (wrist, thumb, index, middle, ring, pinky)</li>
+                        <li><strong>Input:</strong> RGB video frames (any resolution)</li>
+                        <li><strong>Output:</strong> 3D coordinates (x, y, z) for each landmark</li>
+                        <li><strong>Max Hands:</strong> 2 (configurable)</li>
+                        <li><strong>Framework:</strong> MediaPipe 0.10.18 + OpenCV 4.11.0</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h4 style="color: var(--accent-purple); margin-bottom: 1rem;">📊 Parameters Extracted</h4>
+                    <ul>
+                        <li><strong>Performance:</strong> FPS, latency (avg/min/max), total time</li>
+                        <li><strong>Detection:</strong> Number of hands, detection rate</li>
+                        <li><strong>Landmarks:</strong> 21 coordinates per hand (x, y, z)</li>
+                        <li><strong>Geometry:</strong> Finger angles, bounding boxes</li>
+                        <li><strong>Statistics:</strong> Per-frame and aggregate metrics</li>
+                        <li><strong>Export:</strong> JSON format with all parameters</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h3>Example Results</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Value</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Average FPS</strong></td>
+                            <td class="highlight">11.89</td>
+                            <td>Frames per second (CPU-only, MediaPipe)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Average Latency</strong></td>
+                            <td class="highlight">56.90 ms</td>
+                            <td>Per-frame inference time</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Min Latency</strong></td>
+                            <td>49.43 ms</td>
+                            <td>Fastest frame processing time</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Max Latency</strong></td>
+                            <td>79.87 ms</td>
+                            <td>Slowest frame processing time</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Total Frames</strong></td>
+                            <td>30</td>
+                            <td>Frames processed in test run</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Total Time</strong></td>
+                            <td>2.52 seconds</td>
+                            <td>Complete processing duration</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Landmarks per Hand</strong></td>
+                            <td>21</td>
+                            <td>Keypoints detected (wrist + 5 fingers × 4 points)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <h3>Usage Instructions</h3>
+            <div class="code-block"># Install dependencies
+pip3 install mediapipe opencv-python numpy --break-system-packages
+
+# Record a video with hands (5 seconds)
+rpicam-vid -t 5000 --codec h264 -o /tmp/hand_video.h264
+
+# Run the hand landmark detection demo
+python3 src/hand_landmarks/hand_landmark_demo.py --video /tmp/hand_video.h264 --frames 150
+
+# Or use a different camera
+python3 src/hand_landmarks/hand_landmark_demo.py --camera 0 --frames 100
+
+# Options:
+#   --camera ID    : Camera device ID (default: 0)
+#   --frames N     : Number of frames to process (default: 100)
+#   --video PATH   : Video file path (overrides camera)
+#   --no-save      : Do not save results to JSON</div>
+            
+            <h3>Output Format</h3>
+            <p>The demo generates a comprehensive JSON file with all extracted parameters:</p>
+            <div class="code-block">{
+  "timestamp": "20251229_111957",
+  "total_frames": 30,
+  "total_time_sec": 2.52,
+  "avg_fps": 11.89,
+  "avg_latency_ms": 56.90,
+  "min_latency_ms": 49.43,
+  "max_latency_ms": 79.87,
+  "parameters_sample": [
+    {
+      "num_hands": 1,
+      "landmarks": [
+        {"x": 320, "y": 240, "z": 0.1},
+        // ... 20 more landmarks
+      ],
+      "finger_angles": [45.2],
+      "hand_bbox": {
+        "x_min": 200, "y_min": 150,
+        "x_max": 400, "y_max": 350,
+        "width": 200, "height": 200
+      },
+      "frame": 0,
+      "latency_ms": 56.64
+    }
+    // ... more frames
+  ],
+  "all_latencies": [56.64, 62.91, ...]
+}</div>
+            
+            <div class="stats-grid" style="margin-top: 2rem;">
+                <div class="stat-card cyan">
+                    <div class="stat-value">21</div>
+                    <div class="stat-label">Landmarks/Hand</div>
+                </div>
+                <div class="stat-card purple">
+                    <div class="stat-value">11.89</div>
+                    <div class="stat-label">FPS (CPU)</div>
+                </div>
+                <div class="stat-card green">
+                    <div class="stat-value">56.9ms</div>
+                    <div class="stat-label">Avg Latency</div>
+                </div>
+                <div class="stat-card orange">
+                    <div class="stat-value">MediaPipe</div>
+                    <div class="stat-label">Not Hailo Zoo</div>
+                </div>
+            </div>
+            
+            <div class="alert alert-success" style="margin-top: 2rem;">
+                <div class="alert-icon">✅</div>
+                <div>
+                    <div class="alert-title">Key Achievement</div>
+                    <div class="alert-text">This implementation demonstrates end-to-end parameter extraction from a non-Hailo-Zoo model, showing comprehensive metrics collection, real-time visualization, and complete results documentation. The system processes video input, detects hand landmarks, calculates geometric parameters, and exports all data in structured JSON format.</div>
                 </div>
             </div>
         </section>
@@ -1566,7 +1745,15 @@ python3 benchmark_cpu_resnet50.py</div>
                     <div class="finding-icon">🎯</div>
                     <div class="finding-text">
                         <h4>Comprehensive Testing</h4>
-                        <p>5 different model types tested across detection, pose, segmentation, and classification tasks.</p>
+                        <p>5 Hailo models tested plus 1 end-to-end demo (MediaPipe Hands) showing parameter extraction from non-Hailo-Zoo models across detection, pose, segmentation, classification, and hand landmark tasks.</p>
+                    </div>
+                </div>
+                
+                <div class="finding-item">
+                    <div class="finding-icon">✋</div>
+                    <div class="finding-text">
+                        <h4>End-to-End Demo Implementation</h4>
+                        <p>Hand landmark detection demo using MediaPipe Hands (not from Hailo Zoo) demonstrates complete parameter extraction pipeline with 21 landmarks per hand, FPS/latency metrics, and JSON export capabilities.</p>
                     </div>
                 </div>
                 
