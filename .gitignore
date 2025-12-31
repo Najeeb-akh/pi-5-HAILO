@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Model files (too large for git)
+*.hef
+*.onnx
+*.pb
+*.tflite
+*.pt
+*.pth
+
+# Results and logs
+*.log
+results/benchmarks/*.json
+results/benchmarks/*.log
+
+# System info (keep this - it's important for reproducibility)
+!SYSTEM_INFO.txt
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+/tmp/
+*.tmp
+
+# Netlify deployment (can be regenerated)
+results/netlify/
+results/netlify_site.zip
+
+# PDFs (can be regenerated)
+results/*.pdf
+
+# Large video files
+*.h264
+*.mp4
+*.avi
+*.mov
+
