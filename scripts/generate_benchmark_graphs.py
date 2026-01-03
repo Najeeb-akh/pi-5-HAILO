@@ -17,11 +17,13 @@ plt.rcParams['axes.labelsize'] = 12
 plt.rcParams['axes.titlesize'] = 14
 plt.rcParams['legend.fontsize'] = 10
 
-# Create output directory
-output_dir = Path('/home/admin/Desktop/Najeeb/results/graphs')
+# Create output directory (relative to script location)
+script_dir = Path(__file__).parent
+project_root = script_dir.parent
+output_dir = project_root / 'results' / 'graphs'
 output_dir.mkdir(parents=True, exist_ok=True)
 
-# Benchmark data from BENCHMARK_RESULTS.md
+# Benchmark data from benchmarks_result.md
 data = {
     'models': ['Pose\nEstimation\n(YOLOv8s)', 'Segmentation\n(YOLOv5n)', 
                'Object\nDetection\n(YOLOv8s)', 'Classification\n(ResNet50)', 

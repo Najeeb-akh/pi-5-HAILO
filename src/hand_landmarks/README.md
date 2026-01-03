@@ -37,7 +37,7 @@ python3 -c "import mediapipe; print('✅ MediaPipe installed')"
 
 ### Basic Demo (100 frames)
 ```bash
-cd /home/admin/Desktop/Najeeb
+# From project root directory
 python3 src/hand_landmarks/hand_landmark_demo.py --frames 100
 ```
 

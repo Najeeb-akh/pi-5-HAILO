@@ -374,7 +374,7 @@ Person/Face Det.   ~2.0      63.4    ~32.0×
 - `yolov5_personface_raw.log` - YOLOv5 person/face detection benchmark
 - `cpu_resnet50_raw.log` - ResNet50 CPU baseline benchmark
 - `segmentation_raw.log` - YOLOv5n segmentation benchmark
-- `BENCHMARK_RESULTS.md` - This summary document
+- `benchmarks_result.md` - This summary document
 
 ---
 

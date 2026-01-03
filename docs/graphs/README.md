@@ -140,9 +140,9 @@ Reference graphs in markdown:
 ## Graph Data Source
 
 All graphs generated from data in:
-- `results/benchmarks/BENCHMARK_RESULTS.md`
+- `results/benchmarks/benchmarks_result.md`
 - Based on actual benchmark runs using `hailortcli benchmark`
-- CPU baseline measured using `benchmark_cpu_resnet50.py`
+- CPU baseline measured using `scripts/benchmark_cpu_resnet50.py`
 
 ---
 

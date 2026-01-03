@@ -26,7 +26,7 @@ This project benchmarks the performance of the Hailo-8L AI accelerator on Raspbe
 ## Documentation
 
 ### Main Report
-📄 **[PROJECT_REPORT.md](PROJECT_REPORT.md)** - Complete project report with:
+📄 **[final_report.md](final_report.md)** - Complete project report with:
 - Table of contents
 - Clear explanations of all results
 - Step-by-step reproduction guide
@@ -34,20 +34,20 @@ This project benchmarks the performance of the Hailo-8L AI accelerator on Raspbe
 - Conclusions and findings
 
 ### Other Documentation
-- `FINAL_PROJECT_DOCUMENTATION.md` - Detailed implementation record
-- `ESSENTIAL_GUIDE.md` - Quick reference guide
-- `results/benchmarks/BENCHMARK_RESULTS.md` - Detailed benchmark analysis
+- `results/benchmarks/benchmarks_result.md` - Detailed benchmark analysis
 - `docs/research/` - Background research materials
 
 ## Project Structure
 
 ```
 .
-├── PROJECT_REPORT.md          # Main project report (START HERE)
+├── final_report.md            # Main project report (START HERE)
 ├── README.md                  # This file
-├── SYSTEM_INFO.txt            # Complete system information (for reproducibility)
-├── collect_system_info.sh     # Script to collect system info
-├── benchmark_cpu_resnet50.py  # CPU baseline benchmark tool
+│
+├── scripts/
+│   ├── benchmark_cpu_resnet50.py  # CPU baseline benchmark tool
+│   ├── collect_system_info.sh     # Script to collect system info
+│   └── generate_benchmark_graphs.py
 │
 ├── src/
 │   ├── pose_estimation/       # Pose estimation model
@@ -60,7 +60,9 @@ This project benchmarks the performance of the Hailo-8L AI accelerator on Raspbe
 │
 └── results/
     ├── benchmarks/            # Benchmark results and logs
-    └── graphs/                # Visualization graphs
+    │   └── benchmarks_result.md
+    ├── graphs/                # Visualization graphs
+    └── SYSTEM_INFO.txt        # Complete system information
 ```
 
 ## Quick Start
@@ -86,7 +88,7 @@ hailortcli benchmark /usr/share/hailo-models/yolov8s_pose_h8l_pi.hef
 hailortcli benchmark /usr/share/hailo-models/yolov5n_seg_h8l_mz.hef
 
 # CPU baseline (ResNet50 only)
-python3 benchmark_cpu_resnet50.py
+python3 scripts/benchmark_cpu_resnet50.py
 ```
 
 ## Key Models Tested
@@ -108,20 +110,20 @@ python3 benchmark_cpu_resnet50.py
 
 ## Reproducing This Project
 
-See **[PROJECT_REPORT.md](PROJECT_REPORT.md)** Section 5 for complete step-by-step reproduction guide.
+See **[final_report.md](final_report.md)** Section 6 for complete step-by-step reproduction guide.
 
 ## Code Examples
 
 All code examples are included in:
-- `benchmark_cpu_resnet50.py` - CPU baseline measurement
+- `scripts/benchmark_cpu_resnet50.py` - CPU baseline measurement
 - `src/hand_landmarks/hand_landmark_demo.py` - MediaPipe hand detection
-- See PROJECT_REPORT.md Appendix for detailed code explanations
+- See final_report.md Appendix for detailed code explanations
 
 ## System Information
 
 **Complete system details** are documented in:
-- `SYSTEM_INFO.txt` - Complete system information dump
-- `PROJECT_REPORT.md` Section 3.1 - Detailed system environment
+- `results/SYSTEM_INFO.txt` - Complete system information dump
+- `final_report.md` Section 3.1 - Detailed system environment
 
 **Key System Details:**
 - **OS:** Debian GNU/Linux 12 (bookworm)
@@ -131,7 +133,7 @@ All code examples are included in:
 
 To regenerate system info:
 ```bash
-./collect_system_info.sh > SYSTEM_INFO.txt
+./scripts/collect_system_info.sh > results/SYSTEM_INFO.txt
 ```
 
 ## Important Notes
@@ -139,7 +141,7 @@ To regenerate system info:
 - **Model files (`.hef`)** are excluded from git (too large). They can be found in `/usr/share/hailo-models/` on Raspberry Pi with AI Kit installed.
 - **MediaPipe model** is NOT optimized for Hailo - it runs on CPU only.
 - **CPU baselines** for most models are estimated from literature. Only ResNet50 has a real measured baseline.
-- **System information** is critical for reproducibility - see `SYSTEM_INFO.txt` and `PROJECT_REPORT.md` Section 3.1.
+- **System information** is critical for reproducibility - see `results/SYSTEM_INFO.txt` and `final_report.md` Section 3.1.
 
 ## References
 

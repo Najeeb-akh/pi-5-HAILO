@@ -192,7 +192,7 @@ python3 -c "from hailo_platform import VDevice; print('✅ Hailo Python bindings
 **Complete System Information:**
 For a complete system information dump, run:
 ```bash
-./collect_system_info.sh > SYSTEM_INFO.txt
+./scripts/collect_system_info.sh > results/SYSTEM_INFO.txt
 ```
 
 This script collects all system details including OS version, kernel, Python packages, and Hailo firmware. The output is saved in `SYSTEM_INFO.txt` for documentation.
@@ -258,7 +258,7 @@ hailortcli fw-control identify
 **Automated System Info Collection:**
 A script is provided to collect all system information automatically:
 ```bash
-./collect_system_info.sh > SYSTEM_INFO.txt
+./scripts/collect_system_info.sh > results/SYSTEM_INFO.txt
 ```
 
 This generates a complete system information file (`SYSTEM_INFO.txt`) with all details needed for reproducibility.
@@ -287,7 +287,7 @@ This generates a complete system information file (`SYSTEM_INFO.txt`) with all d
 
 For ResNet50, we created a **real CPU baseline** using OpenCV DNN:
 
-**Tool:** `benchmark_cpu_resnet50.py` (custom script)
+**Tool:** `scripts/benchmark_cpu_resnet50.py` (custom script)
 
 **Method:**
 - Loads ResNet50-v1-7 from ONNX Model Zoo
@@ -399,7 +399,7 @@ The following table shows **all benchmark results** with clear explanations:
 - Still provides critical real-time capability (47 FPS vs 6.7 FPS)
 
 **How we measured CPU baseline:**
-- Created `benchmark_cpu_resnet50.py` script
+- Created `scripts/benchmark_cpu_resnet50.py` script
 - Uses OpenCV DNN with ONNX Runtime backend
 - Loads ResNet50-v1-7 from ONNX Model Zoo
 - Runs 100 inference iterations
@@ -754,7 +754,7 @@ This table summarizes how our results compare across all analyzed sources, provi
 ### 5.1 Project Structure
 
 ```
-/home/admin/Desktop/Najeeb/
+.
 ├── src/
 │   ├── pose_estimation/
 │   │   ├── models/
@@ -768,9 +768,13 @@ This table summarizes how our results compare across all analyzed sources, provi
 │   │   ├── hand_landmark_demo.py
 │   │   └── README.md
 │   └── utils/
+├── scripts/
+│   ├── benchmark_cpu_resnet50.py
+│   ├── collect_system_info.sh
+│   └── generate_benchmark_graphs.py
 ├── results/
 │   ├── benchmarks/
-│   │   ├── BENCHMARK_RESULTS.md
+│   │   ├── benchmarks_result.md
 │   │   └── *.log (raw benchmark logs)
 │   └── graphs/
 │       └── *.png (visualization graphs)
@@ -779,8 +783,8 @@ This table summarizes how our results compare across all analyzed sources, provi
 │       ├── hailo_capabilities.md
 │       ├── model_references.md
 │       └── benchmark_comparisons.md
-├── benchmark_cpu_resnet50.py
-└── PROJECT_REPORT.md (this document)
+├── final_report.md (this document)
+└── README.md
 ```
 
 ### 5.2 Step-by-Step Reproduction Guide
@@ -858,7 +862,7 @@ hailortcli benchmark /usr/share/hailo-models/yolov5s_personface_h8l.hef
 
 ```bash
 # Run CPU benchmark
-python3 benchmark_cpu_resnet50.py
+python3 scripts/benchmark_cpu_resnet50.py
 ```
 
 **Expected Output:**
@@ -1012,7 +1016,7 @@ This appendix contains **all the code** used for testing in this project, includ
 
 ### 7.1 CPU Baseline Benchmark Script
 
-**File:** `benchmark_cpu_resnet50.py`
+**File:** `scripts/benchmark_cpu_resnet50.py`
 
 **Purpose:** Measures real CPU performance for ResNet50 classification to create a baseline for comparison with Hailo.
 
@@ -1125,7 +1129,7 @@ if __name__ == "__main__":
 
 **Usage:**
 ```bash
-python3 benchmark_cpu_resnet50.py
+python3 scripts/benchmark_cpu_resnet50.py
 ```
 
 **Expected Output:**
@@ -1550,7 +1554,7 @@ For proper organization, the project should be structured in git as follows:
 .git/
 ├── .gitignore
 ├── README.md (project overview)
-├── PROJECT_REPORT.md (this document)
+├── final_report.md (this document)
 │
 ├── src/
 │   ├── pose_estimation/
@@ -1563,7 +1567,9 @@ For proper organization, the project should be structured in git as follows:
 │   └── utils/
 │
 ├── scripts/
-│   └── benchmark_cpu_resnet50.py
+│   ├── benchmark_cpu_resnet50.py
+│   ├── collect_system_info.sh
+│   └── generate_benchmark_graphs.py
 │
 ├── docs/
 │   └── research/
@@ -1573,7 +1579,7 @@ For proper organization, the project should be structured in git as follows:
 │
 └── results/
     ├── benchmarks/
-    │   ├── BENCHMARK_RESULTS.md
+    │   ├── benchmarks_result.md
     │   └── *.log
     └── graphs/
         └── *.png
